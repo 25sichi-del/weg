@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Лабораторна робота №6 — Варіант 23</title>
+</head>
+<body>
+
+  <h1>Лабораторна робота №6</h1>
+  <h2>Тема: Розміщення зображень та медіа контенту. Створення форм</h2>
+  <p><b>Варіант 23:</b> Картинка фільму та форма підписки</p>
+
+  <hr>
+
+  <!-- 1. ЗОБРАЖЕННЯ -->
+  <h2>1. Зображення</h2>
+
+  <h3>Постер фільму (основний розмір)</h3>
+  <img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=300" 
+       alt="Постер фільму" 
+       width="300" 
+       height="450" 
+       title="Постер улюбленого фільму">
+
+  <h3>Те саме зображення (зменшений розмір)</h3>
+  <img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=150" 
+       alt="Постер фільму (зменшений)" 
+       width="150" 
+       height="225" 
+       title="Зменшена версія постера">
+
+  <hr>
+
+  <!-- 2. АУДІО -->
+  <h2>2. Аудіо</h2>
+  <p>Саундтрек до фільму:</p>
+  <audio controls>
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+    Ваш браузер не підтримує аудіоелемент.
+  </audio>
+
+  <hr>
+
+  <!-- 3. ВІДЕО -->
+  <h2>3. Відео</h2>
+  <p>Трейлер фільму:</p>
+  <video width="480" height="270" controls poster="https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?w=480">
+    <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" type="video/mp4">
+    Ваш браузер не підтримує відеоелемент.
+  </video>
+
+  <hr>
+
+  <!-- 4. ФОРМА ПІДПИСКИ -->
+  <h2>4. Форма підписки на новини про фільми</h2>
+
+  <form action="submit.php" method="post">
+
+    <label>Ім'я:
+      <input type="text" name="username" placeholder="Введіть ім'я" required>
+    </label><br><br>
+
+    <label>Email:
+      <input type="email" name="email" placeholder="example@mail.com" required>
+    </label><br><br>
+
+    <label>Пароль:
+      <input type="password" name="password" minlength="6" required>
+    </label><br><br>
+
+    <label>Дата народження:
+      <input type="date" name="birthdate">
+    </label><br><br>
+
+    <label>Улюблений жанр:
+      <select name="genre">
+        <option value="action">Бойовик</option>
+        <option value="comedy">Комедія</option>
+        <option value="drama">Драма</option>
+        <option value="horror">Жахи</option>
+        <option value="scifi">Фантастика</option>
+      </select>
+    </label><br><br>
+
+    <fieldset style="display: inline-block;">
+      <legend><b>Як часто надсилати новини?</b></legend>
+      <label><input type="radio" name="frequency" value="daily" checked> Щодня</label><br>
+      <label><input type="radio" name="frequency" value="weekly"> Щотижня</label><br>
+      <label><input type="radio" name="frequency" value="monthly"> Щомісяця</label>
+    </fieldset>
+    <br><br>
+
+    <fieldset style="display: inline-block;">
+      <legend><b>Що вас цікавить?</b></legend>
+      <label><input type="checkbox" name="interest" value="premieres"> Прем'єри</label><br>
+      <label><input type="checkbox" name="interest" value="reviews"> Рецензії</label><br>
+      <label><input type="checkbox" name="interest" value="trailers"> Трейлери</label>
+    </fieldset>
+    <br><br>
+
+    <label>Коментар:<br>
+      <textarea name="comment" rows="4" cols="30" placeholder="Ваш коментар..."></textarea>
+    </label><br><br>
+
+    <button type="submit">Підписатися</button>
+    <button type="reset">Очистити</button>
+  </form>
+
+</body>
+</html>
